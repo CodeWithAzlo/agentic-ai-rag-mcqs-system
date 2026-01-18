@@ -1,0 +1,25 @@
+:root {
+  /* BACKGROUND COLORS */
+  --bg-main: #020617;
+  --bg-secondary: #0f172a;
+  --bg-card: #1e293b;
+
+  /* MAGENTA THEME (you circled Amaranth Pink) */
+  --primary: #f19cbb;
+  --primary-dark: #d94d7a;
+
+  /* TEXT COLORS */
+  --text-main: #ffffff;
+  --text-muted: #94a3b8;
+  --text-light: #cbd5f5;
+
+  /* ACCENT COLORS */
+  --info: #38bdf8;
+  --warning: #facc15;
+  --danger: #ef4444;
+  --danger-dark: #dc2626;
+  --success: #22c55e;
+
+  /* BORDERS */
+  --border-dark: #1e293b;
+}

@@ -1,0 +1,215 @@
+/* ============================= */
+/* GLOBAL THEME   */
+/* ============================= */
+.about-container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    #120108 0%,
+    #3b021a 20%,
+    #e52b50 50%,
+    #be96a5 85%,
+    #e0aaaa 100%
+  ) !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: white;
+}
+
+/* 3D SHADOW LINES (MATCH HOME) */
+.about-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.45) 0px,
+    transparent 25px,
+    transparent calc(100% - 1px)
+  );
+  background-size: calc(100% / 15) 100%;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ============================= */
+/* HERO                          */
+/* ============================= */
+.about-hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.about-hero h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.1;
+  background: linear-gradient(to bottom, #ffffff, #cbd5e1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.5));
+}
+
+.about-hero span {
+  color: #ff2d95;
+  -webkit-text-fill-color: #ff2d95;
+}
+
+.about-hero p {
+  max-width: 720px;
+  margin-top: 30px;
+  font-size: 1.3rem;
+  color: #f8f0f3;
+  opacity: 0.95;
+}
+
+/* ============================= */
+/* CONTENT CARDS                 */
+/* ============================= */
+.about-content {
+  position: relative;
+  z-index: 10;
+  padding: 100px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.about-card {
+  background: rgba(18, 1, 8, 0.85);
+  backdrop-filter: blur(14px);
+  border-radius: 28px;
+  padding: 45px 35px;
+  border: 2px solid rgba(255, 45, 149, 0.35);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+  transition: all 0.4s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-12px);
+  border-color: #ff2d95;
+  box-shadow: 0 30px 60px rgba(229, 43, 80, 0.25);
+}
+
+.about-card h3 {
+  color: #ff2d95;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.about-card p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #f8f0f3;
+  opacity: 0.9;
+}
+
+/* ============================= */
+/* STUDENT FLOW                  */
+/* ============================= */
+.about-flow {
+  padding: 120px 30px;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.about-flow h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 60px;
+  color: #120108;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.flow-steps {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.flow-step {
+  background: rgba(18, 1, 8, 0.9);
+  backdrop-filter: blur(12px);
+  padding: 35px 25px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 45, 149, 0.3);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  transition: all 0.4s ease;
+}
+
+.flow-step:hover {
+  transform: translateY(-10px);
+  border-color: #ff2d95;
+}
+
+.flow-step span {
+  font-size: 1.8rem;
+}
+
+.flow-step p {
+  margin-top: 15px;
+  font-size: 1.05rem;
+  color: #f8f0f3;
+}
+
+/* ============================= */
+/* QUOTE SECTION                 */
+/* ============================= */
+.about-quote {
+  position: relative;
+  z-index: 10;
+  margin: 120px auto;
+  max-width: 950px;
+  width: 90%;
+  padding: 50px;
+  text-align: center;
+  background: rgba(18, 1, 8, 0.9);
+  backdrop-filter: blur(14px);
+  border-left: 5px solid #ff2d95;
+  border-radius: 24px;
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.45);
+}
+
+.about-quote p {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #f8f0f3;
+  line-height: 1.7;
+}
+
+.about-quote span {
+  display: block;
+  margin-top: 18px;
+  color: #ff2d95;
+  font-weight: 700;
+}

@@ -1,0 +1,131 @@
+.quiz-wrapper {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+  margin-top: 80px;
+}
+
+.quiz-title {
+  color: #38bdf8;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.question-card {
+  /* background: #020617; */
+  border: 1px solid #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+.question-text {
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-bottom: 8px;
+}
+
+.option:hover {
+  background: #3d163b;
+}
+
+.option.selected {
+  background: #0f766e;
+  color: white;
+}
+
+.option input {
+  accent-color: #38bdf8;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #c52294;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #020617;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #a31674;
+}
+
+.result-card {
+  /* background: #020617; */
+  margin-top: 60px;
+  background: var(--magenta-pro);
+  border: 1px solid #1e293b;
+  padding: 30px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+}
+
+.result-card h3 {
+  color: #38bdf8;
+  margin-bottom: 15px;
+}
+
+.grade span {
+  font-size: 22px;
+  color: #22c55e;
+  font-weight: bold;
+}
+
+.back-btn {
+  margin-top: 20px;
+  padding: 10px 18px;
+  /* background: #7c3aed; */
+  background: #c52294;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #a31674;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 50px;
+  color: #94a3b8;
+}
+
+.already-attempted {
+  background: #1e293b;
+  color: #facc15;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.option.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.submit-btn:disabled {
+  background: #475569;
+  cursor: not-allowed;
+}

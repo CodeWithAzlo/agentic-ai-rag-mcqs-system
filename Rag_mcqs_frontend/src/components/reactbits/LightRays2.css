@@ -1,0 +1,54 @@
+.light-rays-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ray {
+  position: absolute;
+  top: -100px;
+  width: 300px;
+  height: 600px;
+  background: linear-gradient(
+    to bottom,
+    rgba(56, 189, 248, 0.35),
+    rgba(56, 189, 248, 0.05),
+    transparent
+  );
+  filter: blur(40px);
+  animation: rayMove 8s linear infinite;
+}
+
+.r1 {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.r2 {
+  left: 45%;
+  animation-delay: 2s;
+}
+
+.r3 {
+  left: 75%;
+  animation-delay: 4s;
+}
+
+@keyframes rayMove {
+  from {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+}

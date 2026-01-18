@@ -1,0 +1,207 @@
+/* =========================
+   ADMIN DASHBOARD WRAPPER
+========================= */
+.admin-wrapper {
+  padding: 40px;
+  background: var(--magenta-mid);
+  min-height: 100vh;
+  animation: fadeIn 0.6s ease;
+}
+
+/* =========================
+   PAGE TITLE
+========================= */
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 30px;
+}
+
+/* =========================
+   SECTION TITLES
+========================= */
+.section-title {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--magenta-light);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-title::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), transparent);
+}
+
+/* =========================
+   STATS GRID
+========================= */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* =========================
+   STAT CARDS
+========================= */
+.stat-card {
+  background: linear-gradient(145deg, var(--magenta-dark), var(--magenta-pro));
+  padding: 28px;
+  border-radius: 16px;
+  text-align: center;
+  color: var(--text-main);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.stat-card h4 {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.stat-card p {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--success);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .table {
+    white-space: nowrap;
+  }
+}
+
+/* =========================
+   DATA CARD (TABLE REPLACEMENT)
+========================= */
+.data-card {
+  background: linear-gradient(145deg, var(--magenta-dark), var(--magenta-pro));
+  border-radius: 18px;
+  padding: 12px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+  margin-bottom: 40px;
+}
+
+/* =========================
+   HEADER
+========================= */
+.data-header,
+.data-row {
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr 1fr;
+  align-items: center;
+}
+
+.data-header.three,
+.data-row.three {
+  grid-template-columns: 3fr 1fr 1fr;
+}
+
+.data-header {
+  padding: 16px 18px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--primary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* =========================
+   ROWS
+========================= */
+.data-row {
+  padding: 18px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-light);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.25s ease;
+}
+
+.data-row:last-child {
+  border-bottom: none;
+}
+
+.data-row:hover {
+  background: rgba(241, 156, 187, 0.1);
+}
+
+/* =========================
+   TEXT STYLES
+========================= */
+.strong {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.muted {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.success {
+  font-weight: 600;
+  color: var(--success);
+}
+
+/* =========================
+   FIVE COLUMN GRID (USER DETAIL)
+========================= */
+.data-header.five,
+.data-row.five {
+  grid-template-columns: 3fr 1.2fr 1fr 1fr 1.5fr;
+}
+
+/* EMAIL UNDER TITLE */
+.email {
+  margin-top: -10px;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   FOUR COLUMN GRID (ADMIN USERS)
+========================= */
+.data-header.four,
+.data-row.four {
+  grid-template-columns: 2fr 3fr 1fr 2fr;
+}
+.btn.view {
+  background: var(--magenta-mid);
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn.view:hover {
+  background: #80197a;
+}
+
+.btn.delete {
+  background: #ef4444;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn.delete:hover {
+  background: #dc2626;
+}

@@ -1,0 +1,16 @@
+.light-rays {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      circle at 30% 30%,
+      rgba(163, 16, 163, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 70% 60%,
+      rgba(56, 189, 248, 0.12),
+      transparent 45%
+    );
+  pointer-events: none;
+  z-index: 0;
+}

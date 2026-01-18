@@ -1,0 +1,125 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Increased height for better scale */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  background: transparent;
+  z-index: 1000;
+}
+
+/* --- THE FIX: FORCED BRIGHT WHITE & FADED LOGO --- */
+.navbar-left .logo {
+  /* Size and Weight */
+  font-size: 1.5rem !important;
+  font-weight: 900 !important;
+
+  /* Force it to be White */
+  color: white !important;
+
+  /* The Faded Effect */
+  background: linear-gradient(
+    to right,
+    #ffffff 78%,
+    rgba(255, 255, 255, 0.1) 100%
+  ) !important;
+
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+
+  /* Make it stand out against any background */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3)) !important;
+
+  /* Reset any borders that might have been there */
+  border: none !important;
+  border-image: none !important;
+}
+
+/* --- CENTER LINKS: LARGER PILL & TEXT --- */
+.navbar-center {
+  display: flex;
+  gap: 10px;
+  padding: 10px 25px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  border-radius: 60px;
+  border: 1.5px solid transparent;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    linear-gradient(to right, #ff2d95, transparent);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.nav-link {
+  color: #ffffff; /* Pure white for max contrast */
+  text-decoration: none;
+  font-size: 1.1rem; /* Bigger text inside links */
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #4a0026; /* Turns bright pink on hover */
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* --- RIGHT SIDE: LARGE ACTION BUTTONS --- */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-right .nav-link {
+  font-size: 1.2rem; /* Even bigger text for right side */
+}
+
+/* The Main "Signup/Contact" Button Style */
+.nav-link.outline {
+  background: rgba(255, 45, 149, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 14px 35px; /* Huge padding for big buttons */
+  border-radius: 60px;
+  color: #ffffff;
+  border: 2px solid transparent;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    linear-gradient(to right, #ff2d95, #ff2d9500);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link.outline:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 45, 149, 0.2);
+  box-shadow: 0 10px 20px rgba(255, 45, 149, 0.2);
+}
+
+/* Logout Button */
+.logout-btn {
+  background: #ff2d95; /* Matching Brighter Pink */
+  border: none;
+  color: white;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  border-radius: 60px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #e60073;
+  box-shadow: 0 0 20px rgba(255, 45, 149, 0.5);
+  transform: scale(1.05);
+}

@@ -1,0 +1,193 @@
+/* ============================= */
+/* GLOBAL THEME – SAME AS HOME   */
+/* ============================= */
+.contact-container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    #120108 0%,
+    #3b021a 20%,
+    #e52b50 50%,
+    #f8f0f3 85%,
+    #e8e8e8 100%
+  ) !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: white;
+}
+
+/* 3D SHADOW LINES */
+.contact-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.45) 0px,
+    transparent 25px,
+    transparent calc(100% - 1px)
+  );
+  background-size: calc(100% / 15) 100%;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ============================= */
+/* HEADER                        */
+/* ============================= */
+.contact-header {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 120px 20px 60px;
+  position: relative;
+  z-index: 10;
+}
+
+.contact-header h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.1;
+  background: linear-gradient(to bottom, #ffffff, #cbd5e1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.5));
+}
+
+.contact-header p {
+  margin-top: 25px;
+  max-width: 650px;
+  font-size: 1.25rem;
+  color: #f8f0f3;
+  opacity: 0.95;
+}
+
+/* ============================= */
+/* CONTENT LAYOUT                */
+/* ============================= */
+.contact-content {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 50px;
+  padding: 100px 70px;
+  align-items: center;
+}
+
+/* ============================= */
+/* FORM                          */
+/* ============================= */
+.contact-form {
+  position: relative;
+  background: rgba(18, 1, 8, 0.9);
+  backdrop-filter: blur(15px);
+  border-radius: 30px;
+  padding: 45px 40px;
+  border: 2px solid rgba(255, 45, 149, 0.35);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: all 0.4s ease;
+}
+
+.contact-form:hover {
+  border-color: #ff2d95;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f8f0f3;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(248, 240, 243, 0.6);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff2d95;
+  box-shadow: 0 0 0 2px rgba(255, 45, 149, 0.25);
+}
+
+/* BUTTON – SAME STYLE FEEL AS HOME */
+.contact-form button {
+  margin-top: 10px;
+  background: rgba(255, 45, 149, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 14px;
+  border-radius: 60px;
+  color: #ffffff;
+  border: 2px solid transparent;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    linear-gradient(to right, #ff2d95, #ff2d9500);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 45, 149, 0.25);
+  box-shadow: 0 10px 25px rgba(255, 45, 149, 0.25);
+}
+
+/* ============================= */
+/* QUOTE                         */
+/* ============================= */
+.contact-quote {
+  background: rgba(18, 1, 8, 0.9);
+  backdrop-filter: blur(14px);
+  padding: 50px;
+  border-radius: 28px;
+  border-left: 5px solid #ff2d95;
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.45);
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.contact-quote p {
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: #f8f0f3;
+}
+
+.contact-quote span {
+  display: block;
+  margin-top: 18px;
+  font-weight: 700;
+  color: #ff2d95;
+}
